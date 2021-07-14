@@ -1,0 +1,17 @@
+﻿@model AstronomyModel
+
+<form class="astronomy-text-container" asp-controller="Astronomy" asp-action="Destination" method="post">
+    Select Planet: <select asp-for="Planet" required>
+        <option>Mercury</option>
+        <option>Venus</option>
+        <option>Mars</option>
+        <option>Jupiter</option>
+        <option>Saturn</option>
+        <option>Uranus</option>
+        <option>Neptune</option>
+    </select>
+    Enter Age: <input type="text" asp-for="Age" pattern="^\+?(0|[1-9]\d*)$" required />
+    <button type="submit" class="astronomy-submit">Show my itinerary!</button>
+</form>
+@*(Image credit: Alamy)*@
+<img title="Open the pod bay doors Hal" class="image-container" src="https://ychef.files.bbci.co.uk/1600x900/p0639ffn.webp"/>

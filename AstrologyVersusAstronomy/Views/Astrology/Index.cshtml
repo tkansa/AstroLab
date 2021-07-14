@@ -1,0 +1,22 @@
+﻿@model AstrologyModel
+
+<form asp-controller="Astrology" asp-action="Horoscope" method="post">
+    Select Month of Birth: <select asp-for="BirthMonth" required>
+        <option>January</option>
+        <option>February</option>
+        <option>March</option>
+        <option>April</option>
+        <option>May</option>
+        <option>June</option>
+        <option>July</option>
+        <option>August</option>
+        <option>September</option>
+        <option>October</option>
+        <option>November</option>
+        <option>December</option>
+    </select>
+    Enter Date of Birth: <input type="text" asp-for="BirthDay" pattern="^(3[01]|[12][0-9]|[1-9])$" required />
+    <button type="submit" class="astrology-submit">Conjure my horoscope...</button>
+</form>
+@*"File:Astrological Chart -- New Millennium.svg" by Fred the Oyster is licensed with CC BY-SA 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by-sa/4.0*@
+<img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Astrological_Chart_--_New_Millennium.svg"/>

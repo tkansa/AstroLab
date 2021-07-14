@@ -1,0 +1,15 @@
+﻿@model AstronomyModel
+
+<div class="destination-text-container">
+    <p>Pack your bags because you're going to @Model.Planet!</p>
+    <p>You'll be @Model.ArrivalAge when you get there.</p>
+    <p>You're going to want to bring the following items for your galactic journey:</p>
+    @foreach (string item in Model.Supplies)
+    {
+        <div>* @item</div>
+    }
+</div>
+<div class="andromeda-container">
+    @*"File:Andromeda Galaxy (with h-alpha) rotated.jpg" by Adam Evans is licensed under CC BY 2.0*@
+    <img class="image-container" src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Andromeda_Galaxy_%28with_h-alpha%29_rotated.jpg" />
+</div>
