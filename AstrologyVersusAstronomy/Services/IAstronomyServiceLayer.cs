@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AstrologyVersusAstronomy.Services
 {
-	public interface IDALAstronomy
+	public interface IAstronomyServiceLayer
 	{
 
 		public double GetAge(int age, string planet);
 
-		public List<String> GetSupplies(string planet);
+		public List<string> GetSupplies(string planet);
 	}
 }
