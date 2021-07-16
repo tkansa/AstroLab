@@ -10,9 +10,9 @@ namespace AstrologyVersusAstronomy.Controllers
 {
 	public class AstrologyController : Controller
 	{
-		private IDALAstrology dal;
+		private IAstrologyServiceLayer dal;
 
-		public AstrologyController(IDALAstrology dal)
+		public AstrologyController(IAstrologyServiceLayer dal)
 		{
 			this.dal = dal;
 		}
