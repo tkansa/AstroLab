@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace AstrologyVersusAstronomy.Services
+﻿namespace AstrologyVersusAstronomy.Services
 {
-	public class DALAstrology : IDALAstrology
+	public class AstrologyServiceLayer : IAstrologyServiceLayer
 	{
 
 		// Use conditionals to determine, and return an astrological sign based on the user's
@@ -13,9 +8,9 @@ namespace AstrologyVersusAstronomy.Services
 		// or invent your own!
 		public string GetAstrologicalSign(string month, int dayOfMonth)
 		{
-			string astrologicalSign = "";
+			
 
-			return astrologicalSign;
+			return string.Empty;
 		}
 
 
@@ -24,7 +19,7 @@ namespace AstrologyVersusAstronomy.Services
 		// Be creative!
 		public string GetHoroscope(string astrologicalSign)
 		{
-			return "";
+			return string.Empty;
 		}
 
 		

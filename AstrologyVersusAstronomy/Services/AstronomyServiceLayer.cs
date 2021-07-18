@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace AstrologyVersusAstronomy.Services
 {
-	public class DALAstronomy : IDALAstronomy
+	public class AstronomyServiceLayer : IAstronomyServiceLayer
 	{
 		// Use the age and the destination planet to determine the age of the user upon arrival at their
 		// planet of choice. You can use estimates like these:
@@ -18,13 +15,16 @@ namespace AstrologyVersusAstronomy.Services
 			return 0;
 		}
 
-		// Decide on what items the traveller will need based on where they're going.
+		// Decide on what items the traveler will need based on where they're going.
 		// For example, if they're going to Mars, maybe they need sunscreen, water, and a beach bucket and shovel.
 		// Maybe on Jupiter they need orthopedic shoes - all that gravity!
 		// Be creative!
 		public List<string> GetSupplies(string planet)
 		{
-			return new List<string> { "X", "Y", "Z" };
+			return new List<string> { 
+				"X", 
+				"Y", 
+				"Z" };
 		}
 	}
 }

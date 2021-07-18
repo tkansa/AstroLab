@@ -1,20 +1,16 @@
 ﻿using AstrologyVersusAstronomy.Models;
 using AstrologyVersusAstronomy.Services;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AstrologyVersusAstronomy.Controllers
 {
 	public class AstronomyController : Controller
 	{
-		private IDALAstronomy dal;
+		private IAstronomyServiceLayer astronomyService;
 
-		public AstronomyController(IDALAstronomy dal)
+		public AstronomyController(IAstronomyServiceLayer astronomyService)
 		{
-			this.dal = dal;
+			this.astronomyService = astronomyService;
 		}
 		public IActionResult Index()
 		{
@@ -23,8 +19,8 @@ namespace AstrologyVersusAstronomy.Controllers
 
 		public IActionResult Destination(AstronomyModel model)
 		{
-			model.ArrivalAge = dal.GetAge(model.Age, model.Planet);
-			model.Supplies = dal.GetSupplies(model.Planet);
+			model.ArrivalAge = astronomyService.GetAge(model.Age, model.Planet);
+			model.Supplies = astronomyService.GetSupplies(model.Planet);
 			return View(model);
 		}
 	}
